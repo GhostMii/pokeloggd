@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokeLoggd</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>PokeLoggd</h1>
+
+      <nav>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#pokedex">Pokédex</a></li>
+          <li><a href="#">Tipos</a></li>
+          <li><a href="#">Equipes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="pokedex">
+        <h2>Pokédex</h2>
+
+        <form id="form-pesquisa">
+          <h3>Pesquisar Pokémon</h3>
+
+          <div class="filtros">
+            <div class="campo">
+              <label for="pesquisa-nome">Nome:</label>
+              <input
+                type="text"
+                id="pesquisa-nome"
+                placeholder="Ex.: Bulbasaur"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="pesquisa-numero">Número:</label>
+              <input
+                type="number"
+                id="pesquisa-numero"
+                placeholder="Ex.: 1"
+                min="1"
+                max="9999"
+                step="1"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="filtro-tipo">Tipo:</label>
+              <select id="filtro-tipo">
+                <option value="">Todos os tipos</option>
+                <option value="normal">Normal</option>
+                <option value="fogo">Fogo</option>
+                <option value="agua">Água</option>
+                <option value="planta">Planta</option>
+                <option value="eletrico">Elétrico</option>
+                <option value="gelo">Gelo</option>
+                <option value="lutador">Lutador</option>
+                <option value="venenoso">Venenoso</option>
+                <option value="terra">Terra</option>
+                <option value="voador">Voador</option>
+                <option value="psiquico">Psíquico</option>
+                <option value="inseto">Inseto</option>
+                <option value="pedra">Pedra</option>
+                <option value="fantasma">Fantasma</option>
+                <option value="dragao">Dragão</option>
+                <option value="sombrio">Sombrio</option>
+                <option value="metal">Metal</option>
+                <option value="fada">Fada</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="filtro-geracao">Geração:</label>
+              <select id="filtro-geracao">
+                <option value="">Todas as gerações</option>
+                <option value="1">1ª geração</option>
+                <option value="2">2ª geração</option>
+                <option value="3">3ª geração</option>
+                <option value="4">4ª geração</option>
+                <option value="5">5ª geração</option>
+                <option value="6">6ª geração</option>
+                <option value="7">7ª geração</option>
+                <option value="8">8ª geração</option>
+                <option value="9">9ª geração</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="botoes-pesquisa">
+            <button type="submit">Pesquisar</button>
+            <button type="reset">Limpar filtros</button>
+          </div>
+        </form>
+
+        <p id="mensagem" aria-live="polite"></p>
+
+        <div class="grid-cards" id="grid-cards">
+          <article class="card" data-capturado="false" data-numero="1">
+            <img src="img/001.png" alt="Bulbasaur" />
+            <h3>Bulbasaur</h3>
+            <p>Nº 0001</p>
+            <p class="status-captura">Não capturado</p>
+            <button type="button" class="botao-capturar">
+              Marcar como capturado
+            </button>
+          </article>
+
+          <article class="card" data-capturado="false" data-numero="2">
+            <img src="img/002.png" alt="Ivysaur" />
+            <h3>Ivysaur</h3>
+            <p>Nº 0002</p>
+            <p class="status-captura">Não capturado</p>
+            <button type="button" class="botao-capturar">
+              Marcar como capturado
+            </button>
+          </article>
+
+          <article class="card" data-capturado="false" data-numero="3">
+            <img src="img/003.png" alt="Venusaur" />
+            <h3>Venusaur</h3>
+            <p>Nº 0003</p>
+            <p class="status-captura">Não capturado</p>
+            <button type="button" class="botao-capturar">
+              Marcar como capturado
+            </button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>PokeLoggd - Sua Pokédex</p>
+    </footer>
+  </body>
+</html>

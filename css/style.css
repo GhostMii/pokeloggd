@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d62839;
+  color: white;
+}
+
+header {
+  background-color: #b30d16;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 40px 5%;
+  min-height: 80vh;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#form-pesquisa {
+  background-color: #b30d16;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#form-pesquisa h3 {
+  margin-bottom: 20px;
+}
+
+.filtros {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo label {
+  font-weight: bold;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  color: #222222;
+}
+
+.botoes-pesquisa {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.botoes-pesquisa button,
+.botao-capturar {
+  background-color: #7f0b13;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.botoes-pesquisa button:hover,
+.botao-capturar:hover {
+  background-color: #60080e;
+}
+
+#mensagem {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sucesso {
+  color: #8dffb0;
+}
+
+.erro {
+  color: #ffb3b3;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #b30d16;
+  padding: 30px;
+  border-radius: 10px;
+  min-width: 0;
+  text-align: center;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.card img {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  color: #eeeeee;
+  margin-top: 5px;
+}
+
+.botao-capturar {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.status-captura {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.card.capturado {
+  border: 2px solid #8dffb0;
+}
+
+.card.capturado .status-captura {
+  color: #8dffb0;
+}
+
+footer {
+  background-color: #b30d16;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .grid-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .filtros {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .botoes-pesquisa {
+    flex-direction: column;
+  }
+}
